@@ -1,3 +1,20 @@
-body {
-    color: #999;
+.container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+.cell {
+    width: 25%;
+    height: 25%;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.goblin {
+    background-size: cover;
+    background-repeat: no-repeat;
 }

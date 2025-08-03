@@ -1,11 +1,17 @@
-// TODO: write code here
+import image from "../img/goblin.png";
 
-// comment this to pass build
-const unusedVariable = "variable";
+document.addEventListener("DOMContentLoaded", () => {
+  const cells = document.querySelectorAll(".cell");
+  const goblin = document.createElement("img");
+  goblin.src = image;
 
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
+  let currentCell = 0;
 
-console.log("app.js included");
+  function randomMovie() {
+    cells[currentCell].innerHTML = "";
+    currentCell = Math.floor(Math.random() * cells.length);
+    cells[currentCell].append(goblin);
+  }
+
+  setInterval(randomMovie, 2000);
+});
