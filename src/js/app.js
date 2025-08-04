@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   for(let i = 0; i < 16; i++) {
     let cell = document.createElement("div");
     container.append(cell);
-    cell.classList("cell");
+    cells.classList("cell");
     cells.push(cell);
   }
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     do {
       newCell = Math.floor(Math.random() * cells.length);
     } while (newCell === currentCell);
-    cells[currentCell].append(goblin);
+    cells[newCell].append(goblin);
   }
 
   setInterval(randomMovie, 2000);
