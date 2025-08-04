@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   goblin.src = image;
   let currentCell = 0;
 
-  for(let i = 0; i < 16; i++) {
+  if (!container) {
+    console.error("Контейнер не найден!");
+    return;
+  }
+
+  for (let i = 0; i < 16; i++) {
     let cell = document.createElement("div");
     container.append(cell);
     cells.push(cell);
