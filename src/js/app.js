@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   for(let i = 0; i < 16; i++) {
     let cell = document.createElement("div");
     container.append(cell);
-    cells.classList("cell");
     cells.push(cell);
   }
 
